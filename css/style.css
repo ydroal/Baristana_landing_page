@@ -43,7 +43,7 @@ a:hover{
 }
 
 #main {
-  background-image: url(/images/main-bg.jpg);
+  background-image: url(../images/main-bg.jpg);
   /* filter: brightness(122%) saturate(95%) invert(10%) hue-rotate(359deg); */
   transform: translateZ(0);  /* スタイルに影響は与えないが、filterの代わりにスタッキングコンテクストを作成 */
   color:#fff;
@@ -250,7 +250,7 @@ a:hover{
 }
 
 #about {
-  background: linear-gradient(rgba(0, 0, 0, .1),  rgba(0, 0, 0, .1)),  url(/images/main-bg.jpg);
+  background: linear-gradient(rgba(0, 0, 0, .1),  rgba(0, 0, 0, .1)),  url(../images/main-bg.jpg);
   /* background-image: url(/images/main-bg.jpg); */
   background-size: auto; /* 画像の自然な大きさを維持 */
   background-repeat: repeat; /* 画像を繰り返して表示 */
