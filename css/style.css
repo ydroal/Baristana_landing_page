@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 16px;
+  color: #414141;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.header {
+  height: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px;
+  margin: 0 2%;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+
+}
+
+li {
+  margin-left: 2rem;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  color : inherit;
+}
+
+a:hover{
+  text-decoration:underline;
+}
+
+#main {
+  background-image: url(/images/main-bg.jpg);
+  /* filter: brightness(122%) saturate(95%) invert(10%) hue-rotate(359deg); */
+  transform: translateZ(0);  /* スタイルに影響は与えないが、filterの代わりにスタッキングコンテクストを作成 */
+  color:#fff;
+  display: flex;
+  justify-content: space-between; 
+  height: 100vh; /* 画面全体に対して高さを設定する */
+  overflow: hidden; /* Add this line */
+}
+
+#main h1 {
+  font-family: 'Abril Fatface', cursive;
+  font-weight: normal;
+  font-size: 2.9rem;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16); 
+  margin: 0.3rem 0;
+}
+
+#main p {
+  font-family: Arial, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  margin-top: 3.5%;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16); 
+}
+
+.describe {
+  display: flex;
+  flex-direction: column; /* .describe 内の要素を縦に並べる */
+  width: 58%;
+  margin-top: 14%;
+  margin-left: 3%;
+}
+
+.button-enter {
+  align-items: center;
+  width: 7.7rem;
+  padding: .7em 1.8em;
+  border: 2px solid #ffffff;
+  color: #fff;
+  font-weight: 300;
+  font-size: 1.1em;
+  background-color: transparent;
+  margin: 10% 3% 0 auto;
+  
+}
+
+.button-enter:hover {
+  box-shadow: 0 7px 30px -5px rgb(0 0 0 / 20%);
+  background-color: #dcdcdc;
+  opacity: 0.9;
+  color:#232121;
+}
+
+.button-enter:active {
+  -webkit-transform: translate(0,2px);
+	-moz-transform: translate(0,2px);
+	transform: translate(0,2px);
+	border-bottom:none;
+}
+
+.image-content {
+  position: relative; 
+  height: 100%;
+  width: 40%;
+}
+.circle {
+  position: absolute; /* Add this line */
+  right: -15%; /* Add this line */
+  top: -15%; /* Adjust this value as needed */
+  overflow: hidden; 
+  width: 600px;
+  height: 600px;
+  border-radius:50%;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 画像のアスペクト比を維持したまま、ボックス全体を埋めるように拡大縮小される */
+  object-position: center; /* 画像をセンターに配置 */
+}
+#feature {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 3%;
+}
+
+.feature-bgm,
+.feature-chat {
+  margin-top: 5%;
+  /* margin-bottom: 10%; */
+  width: 100%;
+}
+.feature-chat {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.catchphrase {
+  margin-bottom: 0.5rem;
+}
+
+.sub-title-feature-right,
+.sub-title-feature-left {
+  width: 7.5rem;
+  border: 2px solid #232121;
+  color:#232121;
+  height: 3rem;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  margin-bottom: 1.1%;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: 300;
+}
+
+.sub-title-feature-right {
+  margin-left: auto;
+}
+
+
+.sub-title-feature-left {
+  margin-right: auto;
+}
+
+.catchphrase-right,
+.catchphrase-left {
+  font-family: 'Abril Fatface', cursive;
+  font-weight: normal;
+  font-size: 3.5rem;
+  color: #232121;
+  margin: 0;
+  text-align: right;
+}
+
+.catchphrase-left {
+  text-align: left;
+}
+
+.describe-future {
+  font-size: 1.2rem;
+  color: #414141;
+  font-weight: 300;
+  margin-bottom: 0.3rem;
+}
+
+.video-wrap-right {
+  max-width: 65%; /* ここに動画の横幅を指定 */
+  margin-bottom: 0;
+}
+.video-wrap-left {
+  max-width: 65%; /* ここに動画の横幅を指定 */
+  margin-left: auto;
+}
+
+.video-container-left {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.video-container-right {
+  position: relative;
+  margin-left: auto;
+  width:100%; /* 横幅は100%で固定 */
+  padding-top: 56.25%;
+}
+
+.video-container-left iframe,
+.video-container-right iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.overlay-text-right {
+  position: relative;
+  top: -200px; 
+  left: 0; 
+  /* transform: translate(66%, -58%); */
+  text-align: right; 
+  /* width: 100%;  */
+  color: #fff; 
+}
+
+.overlay-text-left {
+  position: relative;
+  top: -187px; 
+  left: 0; 
+ 
+  color: #fff;
+  text-align: left; 
+  width: 100%; /* Set a width for the text container */
+  color: #fff; 
+  
+}
+
+#about {
+  background: linear-gradient(rgba(0, 0, 0, .1),  rgba(0, 0, 0, .1)),  url(/images/main-bg.jpg);
+  /* background-image: url(/images/main-bg.jpg); */
+  background-size: auto; /* 画像の自然な大きさを維持 */
+  background-repeat: repeat; /* 画像を繰り返して表示 */
+  background-position: top left; /* 画像の開始位置を左上に設定 */
+  /* filter: brightness(108%) saturate(95%) invert(10%) hue-rotate(359deg); */
+  color: #fff;
+  font-family: Arial, 'Robot', sans-serif
+}
+
+#about h1 {
+  font-family: 'Abril Fatface', cursive;
+  font-weight: normal;
+  font-size: 3.5rem;
+  text-shadow: #442514 0px 0px 8px;
+  text-align: center;
+  padding-top: 3%;
+  margin-bottom: 6.5%;
+  margin-top: 0;
+}
+
+#about p {
+  font-family: Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  /* font-size: 1.1rem;
+  font-weight: 200; */
+  text-align: left;
+  margin-bottom: 1.6rem;
+  text-shadow: black 2px 2px 12px;
+  line-height: 1.7;
+}
+
+.sub-title,
+.sub-title-speach-bubble {
+  width: 7.5rem;
+  border: 2px solid #ffffff;
+  height: 3rem;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  margin-bottom: 1.1%;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: 300;
+}
+
+.sub-title-speach-bubble {
+  width: 14.5rem;
+  text-shadow: black 1px 1px 10px;
+  position: relative;
+  font-weight: 300;
+}
+
+.sub-title-speach-bubble::before {
+  content: "AND";
+  position: absolute;
+  top: -2em;
+  left: 13em;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #232121;
+  text-shadow: none;
+  font-style: italic;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.sub-title-speach-bubble::after {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  left: 12.8rem;
+  border-width: 0.8rem;
+  border-style: solid;
+  border-color: transparent transparent #fff;
+}
+
+
+.story,
+.about-me {
+  margin: 6% 3% 0 3%;
+}
+
+.closing {
+  font-size: 1.8rem;
+  text-align: center;
+  text-shadow: #442514 1px 1px 10px;
+  margin-top: 5%;
+}
+
+.sns-link {
+  text-align: center;
+}
+
+.sns-link img {
+  width: 4rem;
+  height: 4rem;
+  margin: 5rem 0.5rem;
+}
+
+
+.next-futures {
+  margin-top: 3%;
+  margin-left: 3%;
+  margin-bottom: 3%;
+}
+
+.sub-title-black {
+  width: 16rem;
+  height: 3rem;
+  background-color: #232121;
+  color: #ffffff;
+  /* font-family: Arial, sans-serif; */
+  font-weight: 300;
+  letter-spacing: 0.03rem;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  margin-bottom: 1.1%;
+}
+
+#info p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #414141;
+  font-weight: 300;
+
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #232121;
+  }
+  
+
+footer {
+  text-align: center;
+}
